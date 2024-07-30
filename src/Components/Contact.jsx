@@ -26,29 +26,34 @@ const Data = [
     tooltip: "Mail Me",
   },
 ];
+
 const Contact = () => {
-  const [message, showMessage] = useState(false);
+  // const [message, showMessage] = useState(false);
+  // const [error, setError] = useState(false);
 
   // const sendEmail = (e) => {
   //   e.preventDefault();
 
   //   emailjs
   //     .sendForm(
-  //       "service_rm89nu6",
-  //       "template_1s9mvsq",
+  //       "service_id", // Replace with your EmailJS service ID
+  //       "template_id", // Replace with your EmailJS template ID
   //       e.target,
-  //       "1lxn5BcCkMAPeiPc8"
+  //       "user_id" // Replace with your EmailJS user ID
   //     )
   //     .then(
   //       (result) => {
   //         console.log(result.text);
+  //         showMessage(true);
+  //         setError(false);
   //       },
   //       (error) => {
   //         console.log(error.text);
+  //         showMessage(false);
+  //         setError(true);
   //       }
   //     );
   //   e.target.reset();
-  //   showMessage(true);
   // };
 
   return (
@@ -57,32 +62,35 @@ const Contact = () => {
         Contact
       </h1>
       <div className="flex items-center w-full justify-center gap-8">
-
-{Data.map((item, index) => {
-return (
-<Tooltip
-  key={index}
-  color="black"
-  
-  content={item.tooltip}
-  className="bg-white text-black"
->
-  <a
-    href={item.link}
-    target="_blank"
-    rel="noreferrer"
-    className="rounded-full text-2xl bg-gray-600 bg-opacity-20 hover:bg-opacity-50 w-10 h-10 flex items-center justify-center"
-  >
-    <img src={item.icon} alt={item.tooltip} loading="lazy" className="p-2 text-white bg-white rounded-full" />
-  </a>
-</Tooltip>
-);
-})}
-</div>
+        {Data.map((item, index) => {
+          return (
+            <Tooltip
+              key={index}
+              color="black"
+              content={item.tooltip}
+              className="bg-white text-black"
+            >
+              <a
+                href={item.link}
+                target="_blank"
+                rel="noreferrer"
+                className="rounded-full text-2xl bg-gray-600 bg-opacity-20 hover:bg-opacity-50 w-10 h-10 flex items-center justify-center"
+              >
+                <img
+                  src={item.icon}
+                  alt={item.tooltip}
+                  loading="lazy"
+                  className="p-2 text-white bg-white rounded-full"
+                />
+              </a>
+            </Tooltip>
+          );
+        })}
+      </div>
       <div className="flex flex-col md:flex-row lg:w-[70%] items-center justify-around">
         <div className="w-[100vw] p-5 lg:w-[500px]">
           <div className="relative rounded-lg bg-opacity-60 backdrop-blur-sm p-8  sm:p-12">
-            <form className="bg-slate-900">
+            <form onSubmit="" className="bg-slate-900">
               <div className="mb-6">
                 <Input
                   type="text"
@@ -108,20 +116,30 @@ return (
                   label="Enter Message"
                   required
                   color="blue"
-                  
                 />
               </div>
               <div>
-                <Button variant="gradient" color="blue" className="bg-white" fullWidth type="submit">
+                <Button
+                  variant="gradient"
+                  color="blue"
+                  className="bg-white"
+                  fullWidth
+                  type="submit"
+                >
                   Send Message
                 </Button>
-                <div>
-                  {message ? (
+                {/* <div>
+                  {message && !error && (
                     <p className="text-green-500 text-center mt-2">
                       Message Sent Successfully
                     </p>
-                  ) : null}
-                </div>
+                  )}
+                  {error && (
+                    <p className="text-red-500 text-center mt-2">
+                      Failed to Send Message. Please try again.
+                    </p>
+                  )}
+                </div> */}
               </div>
             </form>
           </div>

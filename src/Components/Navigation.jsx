@@ -1,5 +1,6 @@
 import React from "react";
 import { FaHome, FaLaptopCode, FaReact } from "react-icons/fa";
+import { MdOutlineLibraryBooks } from 'react-icons/md';
 import { MdEmail, MdPersonOutline } from "react-icons/md";
 import { HiOutlineBriefcase } from "react-icons/hi";
 import { IoIosContact } from "react-icons/io";
@@ -22,13 +23,6 @@ const Data = [
     desc: "About",
     src: "/about",
   },
-  // {
-  //   label: "Skills",
-  //   value: "Skills",
-  //   icon: FaLaptopCode,
-  //   desc: "Skills",
-  //   src: "/skills",
-  // },
   {
     label: "Projects",
     value: "Projects",
@@ -44,12 +38,20 @@ const Data = [
     src: "/experience",
   },
   {
+    label: "Blog",
+    value: "Blog",
+    icon: MdOutlineLibraryBooks,
+    desc: "Blog",
+    src: "/blog",
+  },
+  {
     label: "Contact",
     value: "Contact",
     icon: IoIosContact,
     desc: "Contact",
     src: "/contact",
   },
+ 
 ];
 
 const Navigation = () => {
