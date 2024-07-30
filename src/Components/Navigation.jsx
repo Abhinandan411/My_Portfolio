@@ -26,16 +26,9 @@ const Data = [
   {
     label: "Projects",
     value: "Projects",
-    icon: FaReact,
+    icon: FaLaptopCode,
     desc: "Projects",
     src: "/projects",
-  },
-  {
-    label: "Experience",
-    value: "Experience",
-    icon: HiOutlineBriefcase,
-    desc: "Experience",
-    src: "/experience",
   },
   {
     label: "Blog",
@@ -44,6 +37,14 @@ const Data = [
     desc: "Blog",
     src: "/blog",
   },
+  {
+    label: "Experience",
+    value: "Experience",
+    icon: HiOutlineBriefcase,
+    desc: "Experience",
+    src: "/experience",
+  },
+
   {
     label: "Contact",
     value: "Contact",
