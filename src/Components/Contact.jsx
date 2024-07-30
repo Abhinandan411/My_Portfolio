@@ -6,22 +6,22 @@ import { Tooltip } from "@material-tailwind/react";
 
 const Data = [
   {
-    link: "https://www.linkedin.com/in/kishan-vishwakarma-79a07a258/",
+    link: "https://www.linkedin.com/in/abhinandan-kr-b7431623a/",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg",
     tooltip: "Connect On Linkedin",
   },
   {
-    link: "https://github.com/Coolkishann",
+    link: "https://github.com/Abhinandan411",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
     tooltip: "Connect On Github",
   },
   {
-    link: "https://www.instagram.com/__kishannn/",
+    link: "https://www.instagram.com/abhi_babu_04/",
     icon: "https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg",
     tooltip: "Follow On Instagram",
   },
   {
-    link: "mailto:mailto:kishanv1464@gmail.com",
+    link: "mailto:abhinandankumar6204@gmail.com",
     icon: "https://cdn.iconscout.com/icon/free/png-512/free-mail-1299-1100772.png?f=webp&w=256",
     tooltip: "Mail Me",
   },

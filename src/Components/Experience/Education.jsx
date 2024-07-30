@@ -10,6 +10,9 @@ import {
 } from "@material-tailwind/react";
 // import university from "./assets/university.png";
 
+import ptu from "../../assets/ptu.png"
+import bseb from "../../assets/bseb.jpeg"
+
 
 const Education = () => {
   return (
@@ -21,18 +24,18 @@ const Education = () => {
             <TimelineIcon className="p-0">
               <Avatar
                 size="lg"
-                src="https://banner2.cleanpng.com/20180509/lqq/kisspng-university-of-mumbai-alkesh-dinesh-mody-institute-5af2a63dc98cd9.9610869015258517098256.jpg"
+                src={ptu}
                 alt="user 1"
               />
             </TimelineIcon>
             <Typography variant="h5" className="text-blue-900">
-              Mumbai University
+              I.K Gujral Punjab technical university
             </Typography>
           </TimelineHeader>
           <TimelineBody className="pb-14">
             <Typography color="white" className="font-semibold text-black">
-            Bachelor of Science , Computer Science 
-            <br /> 2022 - Present
+            Bachelor of Technology (B-tech) , Computer Science 
+            <br /> 2021 - 2025 <br /> CGPA : 8.5
             </Typography>
           </TimelineBody>
         </TimelineItem>
@@ -46,17 +49,17 @@ const Education = () => {
             <TimelineIcon className="p-0">
               <Avatar
                 size="lg"
-                src="https://vivacollege.org/images/vivalogon.png"
+                src={bseb}
                 alt="user 2"
               />
             </TimelineIcon>
             <Typography variant="h5" className="text-blue-900">
-              Viva College
+            Bihar School Examination Board
             </Typography>
           </TimelineHeader>
           <TimelineBody className="pb-8">
             <Typography color="white" className="font-semibold text-black">
-              Higher Secondary School, Science <br /> 2020 - 2022
+              National College Barauli Gopalganj (Bihar)<br /> 12th: Percentage : 83.3 %
             </Typography>
           </TimelineBody>
         </TimelineItem>
@@ -70,17 +73,17 @@ const Education = () => {
             <TimelineIcon className="p-0">
               <Avatar
                 size="lg"
-                src="https://vidyavaridhividyalaya.in/img/logo.png"
+                src={bseb}
                 alt="user 2"
               />
             </TimelineIcon>
             <Typography variant="h5" className="text-blue-900">
-              Vidya Varidhi Vidyalaya
+            Bihar School Examination Board
             </Typography>
           </TimelineHeader>
           <TimelineBody className="pb-8">
-            <Typography color="white" className="font-semibold text-black">
-            Secondary School Certificate (SSC)  <br /> 2019 - 2020
+          <Typography color="white" className="font-semibold text-black">
+              Heigher Secondary School Barauli Gopalganj (Bihar)<br /> 10th: Percentage : 82.2 %
             </Typography>
           </TimelineBody>
         </TimelineItem>

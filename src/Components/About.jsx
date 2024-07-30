@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import PPng from "../assets/Abhinew.png"; // Ensure the image path is correct
+import PPng from "../assets/myimg.jpg"; 
 import { Button } from "@material-tailwind/react";
 import { Link } from "react-router-dom";
 import { FaReact } from "react-icons/fa";
@@ -10,7 +10,7 @@ import Skills from "./Skills/Skills";
 
 const Data = [
   {
-    link: "https://www.linkedin.com/in/abhinandan",
+    link: "https://www.linkedin.com/in/abhinandan-kr-b7431623a/",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg",
     tooltip: "Connect on LinkedIn",
   },
@@ -20,12 +20,12 @@ const Data = [
     tooltip: "Connect on GitHub",
   },
   {
-    link: "https://www.instagram.com/yourprofile",
+    link: "https://www.instagram.com/abhi_babu_04/",
     icon: "https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg",
     tooltip: "Follow on Instagram",
   },
   {
-    link: "mailto:your.email@example.com",
+    link: "mailto:abhinandankumar6204@gmail.com",
     icon: "https://cdn.iconscout.com/icon/free/png-512/free-mail-1299-1100772.png?f=webp&w=256",
     tooltip: "Email Me",
   },
