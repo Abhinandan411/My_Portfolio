@@ -1,23 +1,19 @@
 import React from "react";
-import { Frontend, Backend, Tools } from "./AllSkills.jsx";
+import { Frontend, Backend, Tools, ProgrammingSkill } from "./AllSkills.jsx";
 
 const skillComponents = {
   Frontend,
   Backend,
   Tools,
+  "Programming languages": ProgrammingSkill,
 };
 
 const Skills = () => {
   const data = [
-    {
-      label: "Frontend",
-    },
-    {
-      label: "Backend",
-    },
-    {
-      label: "Tools",
-    },
+    { label: "Frontend" },
+    { label: "Backend" },
+    { label: "Tools" },
+    { label: "Programming languages" },
   ];
 
   return (
@@ -33,8 +29,7 @@ const Skills = () => {
               <span className="text-xl mt-1">{label}</span>
               <div className="w-16 h-[1px] bg-blue-500 rounded-full my-1"></div>
             </div>
-            {skillComponents[label] &&
-              React.createElement(skillComponents[label])}
+            {skillComponents[label] && React.createElement(skillComponents[label])}
           </div>
         ))}
       </div>

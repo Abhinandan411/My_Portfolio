@@ -1,63 +1,94 @@
 import React from "react";
-import PPng from "../assets/mypic.jpg";
+import { useState, useEffect } from "react";
+import PPng from "../assets/Abhinew.png"; // Ensure the image path is correct
 import { Button } from "@material-tailwind/react";
 import { Link } from "react-router-dom";
 import { FaReact } from "react-icons/fa";
-import Skills from "./Skills/Skills";
 import { MdOutlineDocumentScanner } from "react-icons/md";
 import { Tooltip } from "@material-tailwind/react";
-// import insta from "../assets/instagram.png";
+import Skills from "./Skills/Skills";
 
 const Data = [
   {
-    link: "https://www.linkedin.com/in/kishan-vishwakarma-79a07a258/",
+    link: "https://www.linkedin.com/in/abhinandan",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg",
-    tooltip: "Connect On Linkedin",
+    tooltip: "Connect on LinkedIn",
   },
   {
-    link: "https://github.com/Coolkishann",
+    link: "https://github.com/Abhinandan411",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
-    tooltip: "Connect On Github",
+    tooltip: "Connect on GitHub",
   },
   {
-    link: "https://www.instagram.com/__kishannn/",
+    link: "https://www.instagram.com/yourprofile",
     icon: "https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg",
-    tooltip: "Follow On Instagram",
+    tooltip: "Follow on Instagram",
   },
   {
-    link: "mailto:mailto:kishanv1464@gmail.com",
+    link: "mailto:your.email@example.com",
     icon: "https://cdn.iconscout.com/icon/free/png-512/free-mail-1299-1100772.png?f=webp&w=256",
-    tooltip: "Mail Me",
+    tooltip: "Email Me",
   },
 ];
-const About = () => {
-  return (
-    <>
-      <div className="text-white">
-      <div className="flex flex-col md:flex-row items-center justify-evenly h-screen w-full">
-  <div className="mb-8 md:mb-0 mt-10">
-    <img
-      src={PPng} loading="lazy"
-      alt="Kishan Vishwakarma"
-      class="rounded-t-full rounded-b-full w-48 h-72 md:w-64 md:h-96 object-cover object-center shadow-lg"/>       
-  </div>
 
-          <div className="container flex text-white text-center justify-center items-center w-full md:w-1/2 h-full flex-col">
-            <div className="text-center">
-              <h1 className="text-white text-2xl md:text-5xl font-sans font-semibold">
-                About Me
-              </h1>
-            </div>
-            <div className="text-blue-900 text-3xl md:text-5xl font-bold my-4 md:my-8 text-center">
-              <h2>Fullstack Developer</h2>
-            </div>
-            <div className="text-base font-medium  relative text-black w-10/12 md:w-3/3">
-              <p>
-              I'm a passionate Fullstack Developer with a knack for crafting innovative solutions. My journey in the world of technology is marked by a commitment to excellence in every project. Proficient in a variety of technologies, I thrive on the challenge of creating seamless user experiences and robust backend systems.<br/><br/>
-              Whether it's front-end development with cutting-edge frameworks or architecting resilient server-side solutions, I bring a holistic approach to every endeavor. My dedication to continuous learning ensures that I stay at the forefront of technological advancements.
-              </p>
-            </div>
-            <div className="flex flex-row justify-center md:justify-normal gap-4 md:gap-6 mt-5 text-white">
+
+
+const About = () => {
+
+
+  const texts = ["Front-end Developer", "React Developer"];
+  const [currentText, setCurrentText] = useState("");
+  const [wordIndex, setWordIndex] = useState(0);
+  const [charIndex, setCharIndex] = useState(0);
+
+  useEffect(() => {
+    const fullText = texts[wordIndex];
+
+    // Typing effect
+    if (charIndex <= fullText.length) {
+      const typingSpeed = 100; // Speed at which each character is typed
+      const timer = setTimeout(() => {
+        setCurrentText(fullText.substring(0, charIndex + 1));
+        setCharIndex((prev) => prev + 1);
+      }, typingSpeed);
+      return () => clearTimeout(timer);
+    } else {
+      // Delay before switching to the next text
+      const delay = 2000; // 2 seconds delay
+      const timer = setTimeout(() => {
+        setWordIndex((prev) => (prev + 1) % texts.length);
+        setCharIndex(0);
+      }, delay);
+      return () => clearTimeout(timer);
+    }
+  }, [charIndex, wordIndex]);
+
+  return (
+    <div className="text-white">
+      <div className="flex flex-col md:flex-row items-center justify-evenly h-screen w-full">
+        <div className="mb-8 md:mb-0 mt-10">
+          <img
+            src={PPng} loading="lazy"
+            alt="Abhinandan"
+            className="rounded-t-full rounded-b-full w-48 h-72 md:w-64 md:h-96 object-cover object-center shadow-lg"
+          />
+        </div>
+
+        <div className="container flex text-white text-center justify-center items-center w-full md:w-1/2 h-full flex-col">
+          <div className="text-center">
+            <h1 className="text-white text-2xl md:text-5xl font-sans font-semibold">
+              About Me
+            </h1>
+          </div>
+          <div className="text-blue-900 text-3xl md:text-5xl font-bold my-4 md:my-8 text-center">
+            <h2>{currentText}</h2>
+          </div>
+          <div className="text-base font-medium relative text-black w-10/12 md:w-3/4">
+            <p>
+            I’m a React Developer skilled in creating fluid, interactive user experiences. I design dynamic, high-performance web applications with React, driven by a passion for problem-solving and ongoing development.</p>
+          </div>
+          <div className="flex flex-row justify-center md:justify-normal gap-4 md:gap-6 mt-5 text-white">
+            <Link to="/projects">
               <Button
                 variant="gradient"
                 color="light-blue"
@@ -66,33 +97,28 @@ const About = () => {
                 <FaReact className="text-lg" />
                 Projects
               </Button>
-
-              <Link
-                to="https://drive.google.com/file/d/1kOtRyvNbbjseRcsqVQUaY91NgojY3eAQ/view?usp=sharing"
-                target="_blank"
+            </Link>
+            <Link
+              to="https://drive.google.com/file/d/1kOtRyvNbbjseRcsqVQUaY91NgojY3eAQ/view?usp=sharing"
+              target="_blank"
+            >
+              <Button
+                variant="gradient"
+                color="light-blue"
+                className="flex gap-2 items-center"
               >
-                <Button
-                  variant="gradient"
-                  color="light-blue"
-                  className="flex gap-2 items-center"
-                >
-                  <MdOutlineDocumentScanner className="text-white text-lg" />
-                  Resume
-                </Button>
-              </Link>
-            </div>
+                <MdOutlineDocumentScanner className="text-white text-lg" />
+                Resume
+              </Button>
+            </Link>
           </div>
-
-
         </div>
-          <div className="flex items-center w-full justify-center gap-8 my-10">
-
-          {Data.map((item, index) => {
-        return (
+      </div>
+      <div className="flex items-center w-full justify-center gap-8 my-10">
+        {Data.map((item, index) => (
           <Tooltip
             key={index}
             color="black"
-            
             content={item.tooltip}
             className="bg-white text-black"
           >
@@ -105,12 +131,10 @@ const About = () => {
               <img src={item.icon} alt={item.tooltip} loading="lazy" className="p-2 text-white bg-white rounded-full" />
             </a>
           </Tooltip>
-        );
-      })}
-          </div>
-        <Skills></Skills>
+        ))}
       </div>
-    </>
+      <Skills />
+    </div>
   );
 };
 

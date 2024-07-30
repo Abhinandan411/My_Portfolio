@@ -3,10 +3,10 @@ export const FrontendSkills = [
     name: "React",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
   },
-  // {
-  //   name: "Redux",
-  //   icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg",
-  // },
+  {
+    name: "Redux",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg",
+  },
   {
     name: "JavaScript",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
@@ -22,7 +22,6 @@ export const FrontendSkills = [
   {
     name: "Tailwind CSS",
     icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/768px-Tailwind_CSS_Logo.svg.png?20230715030042",
-    // icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
   },
   {
     name: "Bootstrap",
@@ -61,5 +60,20 @@ export const ToolSkills = [
   {
     name: "PostMen",
     icon: "https://w7.pngwing.com/pngs/28/245/png-transparent-postman-hd-logo.png",
+  },
+];
+
+export const ProgrammingSkills = [
+  {
+    name: "Java",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
+  },
+  {
+    name: "C++",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg",
+  },
+  {
+    name: "JavaScript",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
   },
 ];

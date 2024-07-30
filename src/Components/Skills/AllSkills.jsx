@@ -1,6 +1,9 @@
-import { FrontendSkills, BackendSkills, ToolSkills } from "./SkillsData";
+import { FrontendSkills, BackendSkills, ToolSkills, ProgrammingSkills } from "./SkillsData";
+
+
 
 function SkillCategory({ skills }) {
+  // console.log(skills);
   return (
     <div className="my-5 flex flex-wrap gap-5 md:w-[700px]">
       {skills.map((skill, index) => (
@@ -25,4 +28,9 @@ export function Backend() {
 
 export function Tools() {
   return <SkillCategory skills={ToolSkills} />;
+
+}
+
+export function ProgrammingSkill() {
+  return <SkillCategory skills={ProgrammingSkills} />;
 }
