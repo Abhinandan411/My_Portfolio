@@ -31,7 +31,7 @@ const Data = [
     src: "/projects",
   },
   {
-    label: "Blog",
+    label: "Blogs",
     value: "Blog",
     icon: MdOutlineLibraryBooks,
     desc: "Blog",
