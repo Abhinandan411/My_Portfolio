@@ -28,7 +28,7 @@ const WorkExp = () => {
                 Geekster
               </Typography>
               <Typography className="font-bold text-gray-900 my-2">
-                Full Stack Web Developer Trainee <br /> Aug 2023 - Present
+                Full Stack Web Developer Trainee <br /> Aug 2023 - Sept 2024
               </Typography>
             </div>
           </TimelineHeader>
