@@ -10,6 +10,7 @@ import GymPower from './ProjectImg/gympower.jpg'
 import Aria from './ProjectImg/aria.jpg'
 import UsabilityHub from './ProjectImg/usabilityhub.jpg'
 import Gaming from './ProjectImg/gaming.jpg'
+import Movie from './ProjectImg/movie1.jpg'
 
 export const MernProjectData = [
   {
@@ -20,7 +21,7 @@ export const MernProjectData = [
     github: "https://github.com/Abhinandan411/Amazon-Clone-with-React?tab=readme-ov-file",
   },
   {
-    img: Amazon,
+    img: Movie,
     title: "Movie Web App",
     techstack: " React Js, Redux ,Tailwind CSS ",
     live: "https://react-movie-web-app-mu.vercel.app/",
