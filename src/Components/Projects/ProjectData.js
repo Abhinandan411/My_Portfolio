@@ -20,20 +20,6 @@ export const MernProjectData = [
     github: "https://github.com/Abhinandan411/Amazon-Clone-with-React?tab=readme-ov-file",
   },
   {
-    img: ToDoFusion,
-    title: "ToDoFusion",
-    techstack: " React ,Node ,Express ,MongoDB ,Tailwind CSS",
-    live: "",
-    github: "",
-  },
-  {
-    img: practical,
-    title: "College Practical's Saver",
-    techstack: " React, Mongo ,Express ,Node",
-    live: "",
-    github: "",
-  },
-  {
     img:PhoneHunting ,
     title: "Phone Hunting",
     techstack: " Html ,CSS ,JS",
@@ -82,11 +68,5 @@ export const MernProjectData = [
     live: "https://whimsical-custard-834fb4.netlify.app/",
     github: "https://github.com/Abhinandan411/Web-Pages_Using_HTML_CSS/tree/master/Gaming_Landing_page",
   },
-  {
-    img: AiSum,
-    title: "Shoe-Ecommerce-Website",
-    techstack: " React ,Html ,CSS ,JS",
-    live: "",
-    github: "",
-  },
+ 
 ];
