@@ -20,6 +20,13 @@ export const MernProjectData = [
     github: "https://github.com/Abhinandan411/Amazon-Clone-with-React?tab=readme-ov-file",
   },
   {
+    img: Amazon,
+    title: "Movie Web App",
+    techstack: " React Js, Redux ,Tailwind CSS ",
+    live: "https://react-movie-web-app-mu.vercel.app/",
+    github: "https://github.com/Abhinandan411/React-Movie-web-app",
+  },
+  {
     img:PhoneHunting ,
     title: "Phone Hunting",
     techstack: " Html ,CSS ,JS",
